@@ -1,5 +1,4 @@
-import CreateHabit from "@/containers/Forms/CreateHabit";
-import RegisterUser from '@/app/home/components/RegisterUser';
+import RegisterUser from "@/components/RegisterUser";
 import { UserButton, currentUser } from "@clerk/nextjs";
 
 const page = async () => {
@@ -7,9 +6,8 @@ const page = async () => {
   return (
     <div>
       <RegisterUser />
-      <h2>{user?.firstName}</h2>
+      <h1>{user?.firstName}</h1>
       <UserButton afterSignOutUrl="/"></UserButton>
-      <CreateHabit />
     </div>
   );
 };
