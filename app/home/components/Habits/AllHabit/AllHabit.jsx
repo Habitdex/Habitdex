@@ -34,7 +34,7 @@ const AllHabit = (props) => {
     <div className={styles.all__habits}>
       <div className={styles.habit__container}>
         {!isLoading &&
-          allHabits.map((habit, index) => {
+          allHabits?.map((habit, index) => {
             return (
               <HabitCard
                 id={habit._id}
